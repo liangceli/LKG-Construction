@@ -24,9 +24,16 @@ export default function SuppliersSection() {
         <p>We work with reliable suppliers and recognised brands to help ensure every project meets expectations for quality, compliance and long-term performance.</p>
       </div>
       <div className={styles.logos} aria-label="Supplier brands">
-        {supplierRows.flatMap((row, rowIndex) =>
-          row.map((name) => <SupplierLogo name={name} key={`${rowIndex}-${name}`} />),
+        {supplierRows.map((row, rowIndex) =>
+          row.map((name) => <SupplierLogo name={name} key={`desktop-${rowIndex}-${name}`} />),
         )}
+        {supplierRows.map((row, rowIndex) => (
+          <div className={`${styles.logoRow} ${rowIndex === 1 ? styles.reverse : ''}`} key={`mobile-row-${rowIndex}`}>
+            <div className={styles.logoTrack}>
+              {[...row, ...row].map((name, index) => <SupplierLogo name={name} key={`${rowIndex}-${name}-${index}`} />)}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

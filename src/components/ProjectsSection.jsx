@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { projects } from '../data/siteData.js';
 import SectionTitle from './SectionTitle.jsx';
@@ -9,6 +9,8 @@ const getVisibleCount = () => (window.matchMedia('(max-width: 680px)').matches ?
 export default function ProjectsSection() {
   const [activePage, setActivePage] = useState(0);
   const [visibleCount, setVisibleCount] = useState(getVisibleCount);
+  const galleryRef = useRef(null);
+  const isMobile = visibleCount === 1;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 680px)');
@@ -31,6 +33,22 @@ export default function ProjectsSection() {
 
   const activeProjects = pages[activePage] ?? pages[0];
 
+  const handleMobileScroll = () => {
+    if (!galleryRef.current || !isMobile) return;
+    const { scrollLeft, clientWidth } = galleryRef.current;
+    setActivePage(Math.round(scrollLeft / clientWidth));
+  };
+
+  const goToPage = (index) => {
+    setActivePage(index);
+    if (galleryRef.current && isMobile) {
+      galleryRef.current.scrollTo({
+        left: galleryRef.current.clientWidth * index,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const goToPrevious = () => {
     setActivePage((currentPage) => (currentPage === 0 ? pages.length - 1 : currentPage - 1));
   };
@@ -49,9 +67,9 @@ export default function ProjectsSection() {
           <button aria-label="Next projects" onClick={goToNext} type="button"><ArrowRight size={18} /></button>
         </div>
       </div>
-      <div className={styles.gallery}>
-        {activeProjects.map((project) => (
-          <article className={styles.card} key={`${activePage}-${project.title}`}>
+      <div className={styles.gallery} onScroll={handleMobileScroll} ref={galleryRef}>
+        {(isMobile ? projects : activeProjects).map((project) => (
+          <article className={styles.card} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
             <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
           </article>
@@ -63,7 +81,7 @@ export default function ProjectsSection() {
               aria-current={activePage === index ? 'true' : undefined}
               className={activePage === index ? styles.current : ''}
               key={page[0].title}
-              onClick={() => setActivePage(index)}
+              onClick={() => goToPage(index)}
               type="button"
             />
           ))}

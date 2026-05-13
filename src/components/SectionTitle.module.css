@@ -1,14 +1,14 @@
 .kicker {
   margin: 0 0 18px;
   color: #0578ff;
-  font-size: 14px;
+  font-size: var(--fs-kicker);
   line-height: 1;
   font-weight: 900;
 }
 
 .title {
   margin: 0;
-  font-size: 36px;
+  font-size: var(--fs-section-title);
   line-height: 1.2;
   letter-spacing: 0;
   font-weight: 900;
@@ -24,6 +24,6 @@
 
 @media (max-width: 760px) {
   .title {
-    font-size: 28px;
+    font-size: var(--fs-section-title-mobile);
   }
 }

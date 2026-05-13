@@ -11,7 +11,7 @@
 .copy p {
   margin: 0;
   color: #273144;
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.85;
   font-weight: 500;
 }
@@ -65,6 +65,10 @@
   background: linear-gradient(90deg, #00a859 0 50%, #6ec942 50% 100%);
 }
 
+.logoRow {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .suppliers {
     width: min(100% - 32px, 686px);
@@ -72,7 +76,77 @@
   }
 
   .logos {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    overflow: hidden;
+  }
+
+  .logos > .supplier {
+    display: none;
+  }
+
+  .logoRow {
+    display: block;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .logoRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .logoTrack {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    animation: supplierMarqueeLeft 28s linear infinite;
+  }
+
+  .reverse .logoTrack {
+    animation-name: supplierMarqueeRight;
+  }
+
+  .logoRow:hover .logoTrack,
+  .logoRow:focus-within .logoTrack,
+  .logoRow:active .logoTrack {
+    animation-play-state: paused;
+  }
+
+  .logoTrack .supplier {
+    width: 168px;
+    min-width: 168px;
+    height: 74px;
+    min-height: 74px;
+    scroll-snap-align: center;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 24px;
+    box-shadow: inset 0 0 0 1px #e7ecf5;
+  }
+
+  .logoTrack .supplier:nth-child(n) {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  .logoTrack .supplier:nth-child(4n) {
+    color: #17a6ec;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .logoTrack .supplier:nth-child(4n + 1) {
+    font-size: 22px;
+  }
+
+  .logoTrack .supplier i {
+    width: 22px;
+    height: 28px;
+    margin-left: 8px;
   }
 }
 
@@ -109,5 +183,25 @@
 
   .supplier:nth-child(4) {
     font-size: 36px;
+  }
+}
+
+@keyframes supplierMarqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
+}
+
+@keyframes supplierMarqueeRight {
+  from {
+    transform: translateX(calc(-50% - 9px));
+  }
+
+  to {
+    transform: translateX(0);
   }
 }

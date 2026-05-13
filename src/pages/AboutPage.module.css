@@ -15,7 +15,7 @@
 
 .banner h1 {
   margin: 0 0 31px;
-  font-size: 56px;
+  font-size: var(--fs-page-title);
   line-height: 1;
   font-weight: 900;
 }
@@ -25,7 +25,7 @@
   align-items: center;
   gap: 15px;
   margin: 0;
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   font-weight: 800;
 }
 
@@ -52,7 +52,7 @@
 .kicker {
   margin: 0 0 17px;
   color: var(--blue);
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   line-height: 1;
   font-weight: 900;
 }
@@ -73,7 +73,7 @@
 .cta h2 {
   margin: 0;
   color: #101a31;
-  font-size: 38px;
+  font-size: var(--fs-section-title);
   line-height: 1.18;
   font-weight: 900;
 }
@@ -85,7 +85,7 @@
 .teamCard p,
 .valueCard p {
   color: #263449;
-  font-size: 14px;
+  font-size: var(--fs-card-body);
   line-height: 1.85;
   font-weight: 550;
 }
@@ -124,13 +124,13 @@
 .valueCard h3 {
   margin: 0 0 6px;
   color: var(--blue);
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   font-weight: 900;
 }
 
 .valueCard p {
   margin: 0;
-  font-size: 11px;
+  font-size: var(--fs-small);
   line-height: 1.65;
 }
 
@@ -222,7 +222,7 @@
 .teamCard h3 {
   margin: 0 0 7px;
   color: #101a31;
-  font-size: 18px;
+  font-size: var(--fs-card-title);
   line-height: 1.2;
   font-weight: 900;
 }
@@ -231,13 +231,13 @@
   display: block;
   margin-bottom: 18px;
   color: #253147;
-  font-size: 12px;
+  font-size: var(--fs-small);
 }
 
 .teamCard p {
   min-height: 112px;
   margin: 0 0 18px;
-  font-size: 12px;
+  font-size: var(--fs-small);
 }
 
 .teamCard a {
@@ -281,13 +281,13 @@
 .serviceItem h3 {
   margin: 0 0 18px;
   color: #101a31;
-  font-size: 20px;
+  font-size: var(--fs-card-title);
   font-weight: 900;
 }
 
 .serviceItem p {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--fs-small);
 }
 
 .statsBar {
@@ -326,14 +326,14 @@
 }
 
 .statItem strong {
-  font-size: 26px;
+  font-size: var(--fs-form-title);
   line-height: 1.1;
   font-weight: 900;
 }
 
 .statItem span {
   margin-top: 5px;
-  font-size: 12px;
+  font-size: var(--fs-small);
   font-weight: 700;
 }
 
@@ -358,13 +358,13 @@
 }
 
 .cta h2 {
-  font-size: 40px;
+  font-size: var(--fs-section-title);
 }
 
 .cta p {
   max-width: 620px;
   margin: 22px auto 28px;
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.7;
   font-weight: 650;
 }
@@ -394,7 +394,7 @@
   }
 
   .banner h1 {
-    font-size: 42px;
+    font-size: var(--fs-page-title-mobile);
   }
 
   .intro,
@@ -452,7 +452,7 @@
   }
 
   .banner h1 {
-    font-size: 48px;
+    font-size: var(--fs-page-title-mobile);
   }
 
   .intro,
@@ -531,7 +531,7 @@
 
   .banner h1 {
     margin-bottom: 22px;
-    font-size: 38px;
+    font-size: var(--fs-page-title-mobile);
   }
 
   .intro {
@@ -555,13 +555,13 @@
   .teamSection h2,
   .servicesSection h2,
   .cta h2 {
-    font-size: 30px;
+    font-size: var(--fs-section-title-mobile);
   }
 
   .bodyText,
   .storyCopy p,
   .centerText {
-    font-size: 14px;
+    font-size: var(--fs-card-body);
   }
 
   .valuesGrid,
@@ -615,19 +615,19 @@
 
 @media (max-width: 430px) {
   .banner p {
-    font-size: 12px;
+    font-size: var(--fs-small);
   }
 
   .kicker {
-    font-size: 12px;
+    font-size: var(--fs-small);
   }
 
   .intro h2,
   .storyCopy h2,
   .teamSection h2,
   .servicesSection h2,
-  .cta h2 {
-    font-size: 27px;
+    .cta h2 {
+    font-size: var(--fs-section-title-small);
   }
 
   .valueCard {
@@ -644,6 +644,6 @@
   }
 
   .cta p {
-    font-size: 14px;
+    font-size: var(--fs-card-body);
   }
 }

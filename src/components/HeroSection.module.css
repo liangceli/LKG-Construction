@@ -50,7 +50,7 @@
   align-items: center;
   gap: 48px;
   margin-left: auto;
-  font-size: 15px;
+  font-size: var(--fs-nav);
   font-weight: 800;
 }
 
@@ -81,7 +81,7 @@
   border-radius: 4px;
   background: var(--blue);
   box-shadow: 0 14px 26px rgba(7, 92, 255, 0.3);
-  font-size: 11px;
+  font-size: var(--fs-button);
   font-weight: 900;
 }
 
@@ -96,7 +96,7 @@
 .eyebrow {
   margin: 0 0 20px;
   color: #0578ff;
-  font-size: 15px;
+  font-size: var(--fs-kicker);
   line-height: 1;
   font-weight: 900;
 }
@@ -104,7 +104,7 @@
 .content h1 {
   max-width: 610px;
   margin: 0;
-  font-size: 58px;
+  font-size: var(--fs-hero-title);
   line-height: 1.23;
   letter-spacing: 0;
   font-weight: 900;
@@ -124,7 +124,7 @@
   max-width: 520px;
   margin: 22px 0 38px;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.8;
   font-weight: 600;
 }
@@ -171,14 +171,14 @@
 }
 
 .stat strong {
-  font-size: 24px;
+  font-size: var(--fs-form-title);
   line-height: 1.1;
   font-weight: 900;
 }
 
 .stat small {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: var(--fs-card-body);
   line-height: 1.25;
   font-weight: 650;
 }
@@ -259,11 +259,17 @@
 @media (max-width: 860px) {
   .hero {
     min-height: auto;
+    background: url("/assets/hero-space.png") center/cover no-repeat;
+  }
+
+  .hero::before {
+    display: none;
   }
 
   .heroBg {
+    display: none;
     inset: 0;
-    opacity: 0.7;
+    opacity: 1;
     mask-image: none;
     -webkit-mask-image: none;
   }
@@ -291,7 +297,7 @@
   }
 
   .eyebrow {
-    font-size: 12px;
+    font-size: var(--fs-small);
     line-height: 1.4;
   }
 
@@ -300,7 +306,7 @@
   }
 
   .copy {
-    font-size: 14px;
+    font-size: var(--fs-card-body);
   }
 
   .statIcon {
@@ -313,7 +319,7 @@
   }
 
   .stat small {
-    font-size: 11px;
+    font-size: var(--fs-button);
   }
 }
 

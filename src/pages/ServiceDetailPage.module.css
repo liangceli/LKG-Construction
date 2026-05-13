@@ -23,7 +23,7 @@
 
 .banner h1 {
   margin: 0 0 23px;
-  font-size: 56px;
+  font-size: var(--fs-page-title);
   line-height: 1;
   font-weight: 900;
 }
@@ -33,7 +33,7 @@
   align-items: center;
   gap: 11px;
   margin: 0 0 24px;
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   font-weight: 800;
 }
 
@@ -49,7 +49,7 @@
   max-width: 460px;
   margin: 0;
   color: rgba(255, 255, 255, 0.96);
-  font-size: 15px;
+  font-size: var(--fs-body);
   line-height: 1.75;
   font-weight: 650;
 }
@@ -65,7 +65,7 @@
 .kicker {
   margin: 0 0 18px;
   color: var(--blue);
-  font-size: 12px;
+  font-size: var(--fs-small);
   line-height: 1;
   font-weight: 900;
 }
@@ -86,7 +86,7 @@
 .cta h2 {
   margin: 0;
   color: #101a31;
-  font-size: 34px;
+  font-size: var(--fs-section-title);
   line-height: 1.18;
   font-weight: 900;
 }
@@ -98,7 +98,7 @@
 .bodyText {
   margin: 26px 0 32px;
   color: #263449;
-  font-size: 13px;
+  font-size: var(--fs-body);
   line-height: 1.82;
   font-weight: 600;
 }
@@ -129,7 +129,7 @@
 .strengthItem h3 {
   margin: 0 0 5px;
   color: var(--blue);
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   line-height: 1.2;
   font-weight: 900;
 }
@@ -137,7 +137,7 @@
 .strengthItem p {
   margin: 0;
   color: #263449;
-  font-size: 11px;
+  font-size: var(--fs-small);
   line-height: 1.55;
   font-weight: 620;
 }
@@ -171,7 +171,7 @@
 .systemHeading > p {
   margin: 0 0 4px;
   color: #263449;
-  font-size: 13px;
+  font-size: var(--fs-body);
   line-height: 1.75;
   font-weight: 620;
 }
@@ -198,14 +198,14 @@
 .systemCard h3 {
   margin: 28px 0 14px;
   color: #101a31;
-  font-size: 15px;
+  font-size: var(--fs-body);
   font-weight: 900;
 }
 
 .systemCard p {
   margin: 0;
   color: #263449;
-  font-size: 11px;
+  font-size: var(--fs-small);
   line-height: 1.65;
   font-weight: 620;
 }
@@ -283,7 +283,7 @@
 .projectCard h3 {
   margin: 0 0 6px;
   color: #fff;
-  font-size: 15px;
+  font-size: var(--fs-body);
   line-height: 1.25;
   font-weight: 900;
 }
@@ -291,7 +291,7 @@
 .projectCard p {
   margin: 0;
   color: #fff;
-  font-size: 11px;
+  font-size: var(--fs-small);
   font-weight: 650;
 }
 
@@ -348,7 +348,7 @@
 .processItem h3 {
   margin: 18px 0 12px;
   color: #101a31;
-  font-size: 14px;
+  font-size: var(--fs-card-body);
   font-weight: 900;
 }
 
@@ -356,7 +356,7 @@
   max-width: 150px;
   margin: 0 auto;
   color: #263449;
-  font-size: 11px;
+  font-size: var(--fs-small);
   line-height: 1.62;
   font-weight: 620;
 }
@@ -383,14 +383,14 @@
 
 .cta h2 {
   color: #fff;
-  font-size: 30px;
+  font-size: var(--fs-section-title);
 }
 
 .cta p {
   max-width: 520px;
   margin: 14px 0 0;
   color: rgba(255, 255, 255, 0.94);
-  font-size: 13px;
+  font-size: var(--fs-kicker);
   line-height: 1.65;
   font-weight: 650;
 }
@@ -451,7 +451,7 @@
   }
 
   .banner h1 {
-    font-size: 42px;
+    font-size: var(--fs-page-title-mobile);
   }
 
   .intro {
@@ -487,12 +487,12 @@
 
 @media (max-width: 430px) {
   .banner h1 {
-    font-size: 36px;
+    font-size: var(--fs-page-title-small);
   }
 
   .breadcrumb,
   .kicker {
-    font-size: 12px;
+    font-size: var(--fs-small);
   }
 
   .introCopy h2,
@@ -500,7 +500,7 @@
   .sectionHead h2,
   .process h2,
   .cta h2 {
-    font-size: 27px;
+    font-size: var(--fs-section-title-small);
   }
 
   .strengthItem {

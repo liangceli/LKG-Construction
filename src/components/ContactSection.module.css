@@ -16,7 +16,7 @@
 .copy p {
   margin: 0 0 24px;
   color: #273144;
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.85;
   font-weight: 500;
 }
@@ -28,7 +28,7 @@
   padding: 0;
   list-style: none;
   color: #172033;
-  font-size: 17px;
+  font-size: var(--fs-body-large);
   line-height: 1.35;
 }
 
@@ -73,7 +73,7 @@
   border-radius: 4px;
   background: #fff;
   color: #202b3d;
-  font-size: 14px;
+  font-size: var(--fs-card-body);
   font-weight: 500;
 }
 
@@ -102,7 +102,7 @@
   border-radius: 4px;
   color: #fff;
   background: var(--blue);
-  font-size: 11px;
+  font-size: var(--fs-button);
   font-weight: 900;
   cursor: pointer;
 }
@@ -112,6 +112,25 @@
     width: min(100% - 32px, 686px);
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .copy {
+    text-align: center;
+  }
+
+  .contactRule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy li {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 22px auto;
+    gap: 12px;
+    align-items: center;
+    text-align: left;
   }
 }
 
@@ -136,7 +155,7 @@
 @media (max-width: 520px) {
   .copy p,
   .copy ul {
-    font-size: 14px;
+    font-size: var(--fs-card-body);
   }
 
   .copy b {

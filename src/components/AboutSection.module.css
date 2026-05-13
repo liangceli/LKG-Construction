@@ -12,7 +12,7 @@
 .text p {
   margin: 0 0 18px;
   color: #273144;
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.85;
   font-weight: 500;
 }
@@ -56,6 +56,6 @@
   }
 
   .text p {
-    font-size: 14px;
+    font-size: var(--fs-card-body);
   }
 }

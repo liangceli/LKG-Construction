@@ -9,13 +9,13 @@
 }
 
 .copy h2 {
-  font-size: 32px;
+  font-size: var(--fs-section-title);
 }
 
 .copy p {
   margin: 30px 0 38px;
   color: #273144;
-  font-size: 16px;
+  font-size: var(--fs-body-large);
   line-height: 1.85;
   font-weight: 500;
 }
@@ -96,7 +96,7 @@
   bottom: 22px;
   margin: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: var(--fs-card-title);
   line-height: 1.2;
   font-weight: 900;
 }
@@ -193,12 +193,28 @@
     padding-bottom: 64px;
   }
 
+  .sliderControls {
+    display: none;
+  }
+
   .gallery {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
   }
 
   .card {
+    width: 100%;
+    min-width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;
+    scroll-snap-align: start;
   }
 }
