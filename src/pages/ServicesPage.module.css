@@ -1,0 +1,307 @@
+.banner {
+  min-height: 405px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(1, 7, 12, 0.98), rgba(4, 12, 22, 0.86) 42%, rgba(5, 12, 20, 0.45)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36)),
+    url("/assets/about-partition-framing.png") center 38% / cover no-repeat;
+}
+
+.bannerInner,
+.services,
+.cta {
+  width: min(var(--content-width), calc(100% - var(--content-gutter)));
+  margin: 0 auto;
+}
+
+.bannerInner {
+  padding-top: 82px;
+}
+
+.banner h1 {
+  margin: 0 0 23px;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 28px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.breadcrumb strong {
+  color: var(--blue-bright);
+}
+
+.bannerCopy {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 650;
+}
+
+.services {
+  padding: 72px 0 74px;
+}
+
+.heading {
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 80px;
+  align-items: end;
+}
+
+.kicker {
+  margin: 0 0 18px;
+  color: var(--blue);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.kicker::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 3px;
+  margin-top: 16px;
+  background: var(--blue);
+}
+
+.heading h2 {
+  margin: 0;
+  color: #101a31;
+  font-size: 34px;
+  line-height: 1.22;
+  font-weight: 900;
+}
+
+.heading > p {
+  margin: 0 0 2px;
+  color: #263449;
+  font-size: 15px;
+  line-height: 1.78;
+  font-weight: 600;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  min-height: 410px;
+  overflow: hidden;
+  border: 1px solid #e0e7f2;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(12, 28, 56, 0.07);
+}
+
+.card > img {
+  width: 100%;
+  height: 176px;
+  display: block;
+  object-fit: cover;
+}
+
+.cardBody {
+  position: relative;
+  padding: 44px 28px 28px;
+}
+
+.anchor {
+  position: absolute;
+  top: -96px;
+}
+
+.cardIcon {
+  position: absolute;
+  top: -31px;
+  left: 28px;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--blue);
+  background: #f3f6ff;
+  box-shadow: 0 12px 24px rgba(12, 40, 90, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 17px;
+  color: #101a31;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.card p {
+  min-height: 84px;
+  margin: 0 0 20px;
+  color: #263449;
+  font-size: 14px;
+  line-height: 1.72;
+  font-weight: 580;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.cta {
+  width: 100%;
+  min-height: 174px;
+  padding: 0 max(var(--content-gutter), calc((100% - var(--content-width)) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(3, 12, 22, 0.96), rgba(4, 14, 25, 0.9)),
+    url("/assets/about-cta-ceiling-grid.png") center 45% / cover no-repeat;
+}
+
+.cta h2 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.cta p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 650;
+}
+
+.cta a {
+  min-width: 250px;
+  height: 58px;
+}
+
+@media (max-width: 1020px) {
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .heading > p {
+    max-width: 560px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .bannerInner,
+  .services {
+    width: min(100% - 32px, 686px);
+  }
+
+  .banner {
+    min-height: 340px;
+  }
+
+  .bannerInner {
+    padding-top: 54px;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .bannerCopy {
+    font-size: 14px;
+  }
+
+  .services {
+    padding: 58px 0;
+  }
+
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .card > img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .card p {
+    min-height: 0;
+  }
+
+  .cta {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 430px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .breadcrumb,
+  .kicker {
+    font-size: 12px;
+  }
+
+  .heading h2,
+  .cta h2 {
+    font-size: 27px;
+  }
+
+  .cardBody {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .cardIcon {
+    left: 22px;
+  }
+
+  .cta a {
+    min-width: 0;
+    width: 100%;
+  }
+}

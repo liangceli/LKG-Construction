@@ -1,0 +1,519 @@
+.banner {
+  min-height: 405px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(1, 7, 12, 0.98), rgba(4, 12, 22, 0.86) 42%, rgba(5, 12, 20, 0.45)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.36)),
+    var(--service-hero-image) center 38% / cover no-repeat;
+}
+
+.bannerInner,
+.intro,
+.systems,
+.projects,
+.process,
+.cta {
+  width: min(var(--content-width), calc(100% - var(--content-gutter)));
+  margin: 0 auto;
+}
+
+.bannerInner {
+  padding-top: 76px;
+}
+
+.banner h1 {
+  margin: 0 0 23px;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 24px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.breadcrumb svg {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb strong {
+  color: var(--blue-bright);
+}
+
+.bannerCopy {
+  max-width: 460px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 650;
+}
+
+.intro {
+  padding: 72px 0;
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 84px;
+  align-items: center;
+}
+
+.kicker {
+  margin: 0 0 18px;
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.kicker::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin-top: 15px;
+  background: var(--blue);
+}
+
+.introCopy h2,
+.systemHeading h2,
+.sectionHead h2,
+.process h2,
+.cta h2 {
+  margin: 0;
+  color: #101a31;
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.systemHeading h2 span {
+  display: block;
+}
+
+.bodyText {
+  margin: 26px 0 32px;
+  color: #263449;
+  font-size: 13px;
+  line-height: 1.82;
+  font-weight: 600;
+}
+
+.strengthList {
+  display: grid;
+  gap: 19px;
+  margin-bottom: 9px;
+}
+
+.strengthItem {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.strengthItem span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--blue);
+  background: #f1f5ff;
+}
+
+.strengthItem h3 {
+  margin: 0 0 5px;
+  color: var(--blue);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.strengthItem p {
+  margin: 0;
+  color: #263449;
+  font-size: 11px;
+  line-height: 1.55;
+  font-weight: 620;
+}
+
+.mainImage {
+  width: 100%;
+  height: 520px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1);
+}
+
+.systemBand,
+.processBand {
+  background: #f5f8ff;
+}
+
+.systems {
+  padding: 58px 0 62px;
+}
+
+.systemHeading {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  gap: 80px;
+  align-items: end;
+}
+
+.systemHeading > p {
+  margin: 0 0 4px;
+  color: #263449;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 620;
+}
+
+.systemGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.systemCard {
+  min-height: 190px;
+  padding: 30px 28px 28px;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(10, 32, 70, 0.05);
+}
+
+.systemCard svg {
+  color: var(--blue);
+}
+
+.systemCard h3 {
+  margin: 28px 0 14px;
+  color: #101a31;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.systemCard p {
+  margin: 0;
+  color: #263449;
+  font-size: 11px;
+  line-height: 1.65;
+  font-weight: 620;
+}
+
+.projects {
+  padding: 60px 0 58px;
+}
+
+.sectionHead {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.arrows {
+  display: flex;
+  gap: 18px;
+}
+
+.arrows button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d7dfea;
+  border-radius: 50%;
+  color: #263143;
+  background: #fff;
+  cursor: pointer;
+}
+
+.arrows button:last-child {
+  color: var(--blue);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.projectCard {
+  position: relative;
+  min-height: 196px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #111;
+  box-shadow: 0 14px 28px rgba(10, 22, 42, 0.11);
+}
+
+.projectCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 32%, rgba(0, 0, 0, 0.86) 100%);
+}
+
+.projectCard img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.projectCard div {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  right: 18px;
+  bottom: 18px;
+}
+
+.projectCard h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.projectCard p {
+  margin: 0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 24px;
+}
+
+.dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8ced7;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.dots .currentDot,
+.dots button:hover,
+.dots button:focus-visible {
+  background: var(--blue);
+  outline: 0;
+}
+
+.dots button:hover,
+.dots button:focus-visible {
+  transform: scale(1.18);
+}
+
+.process {
+  padding: 54px 0 58px;
+}
+
+.processGrid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.processItem {
+  position: relative;
+  text-align: center;
+}
+
+.processItem svg {
+  color: var(--blue);
+}
+
+.processItem h3 {
+  margin: 18px 0 12px;
+  color: #101a31;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.processItem p {
+  max-width: 150px;
+  margin: 0 auto;
+  color: #263449;
+  font-size: 11px;
+  line-height: 1.62;
+  font-weight: 620;
+}
+
+.processArrow {
+  position: absolute;
+  top: 29px;
+  right: -24px;
+}
+
+.cta {
+  width: 100%;
+  min-height: 150px;
+  padding: 0 max(var(--content-gutter), calc((100% - var(--content-width)) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(3, 12, 22, 0.96), rgba(4, 14, 25, 0.9)),
+    url("/assets/about-cta-ceiling-grid.png") center 45% / cover no-repeat;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.cta p {
+  max-width: 520px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 650;
+}
+
+.cta a {
+  min-width: 250px;
+  height: 48px;
+}
+
+@media (max-width: 1020px) {
+  .intro,
+  .systemHeading {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .introCopy,
+  .systemHeading > p {
+    max-width: 680px;
+  }
+
+  .systemGrid,
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .processArrow {
+    display: none;
+  }
+
+  .cta {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .bannerInner,
+  .intro,
+  .systems,
+  .projects,
+  .process {
+    width: min(100% - 32px, 686px);
+  }
+
+  .banner {
+    min-height: 340px;
+  }
+
+  .bannerInner {
+    padding-top: 52px;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .intro {
+    padding: 56px 0;
+  }
+
+  .mainImage {
+    height: auto;
+    aspect-ratio: 16 / 11;
+  }
+
+  .systemGrid,
+  .projectGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHead {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projectCard {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .cta {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 430px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .breadcrumb,
+  .kicker {
+    font-size: 12px;
+  }
+
+  .introCopy h2,
+  .systemHeading h2,
+  .sectionHead h2,
+  .process h2,
+  .cta h2 {
+    font-size: 27px;
+  }
+
+  .strengthItem {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .strengthItem span {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cta a {
+    min-width: 0;
+    width: 100%;
+  }
+}

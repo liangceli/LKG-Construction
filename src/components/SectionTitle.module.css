@@ -1,0 +1,29 @@
+.kicker {
+  margin: 0 0 18px;
+  color: #0578ff;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+.rule {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 18px 0 34px;
+  background: var(--blue);
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 28px;
+  }
+}

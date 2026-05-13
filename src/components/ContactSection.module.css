@@ -1,0 +1,158 @@
+.contact {
+  width: min(var(--content-width), calc(100% - var(--content-gutter)));
+  min-height: 510px;
+  margin: 0 auto;
+  padding: 50px 0 76px;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  gap: 86px;
+  align-items: start;
+}
+
+.contactRule {
+  margin-bottom: 19px;
+}
+
+.copy p {
+  margin: 0 0 24px;
+  color: #273144;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.copy ul {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #172033;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.copy li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.copy svg {
+  color: var(--blue);
+}
+
+.copy b {
+  display: inline-block;
+  min-width: 96px;
+  font-weight: 500;
+}
+
+.form {
+  margin-top: 6px;
+  padding: 22px;
+  border-radius: 8px;
+  background: #f5f8ff;
+  box-shadow: 0 18px 42px rgba(10, 32, 70, 0.08);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #202b3d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form input,
+.form select {
+  height: 54px;
+  padding: 0 20px;
+}
+
+.form textarea {
+  height: 136px;
+  margin-bottom: 16px;
+  padding: 20px;
+  resize: vertical;
+}
+
+.form select {
+  margin-bottom: 20px;
+  appearance: auto;
+}
+
+.form button {
+  width: 100%;
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .contact {
+    width: min(100% - 32px, 686px);
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1020px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 64px 0;
+  }
+
+  .copy {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 520px) {
+  .copy p,
+  .copy ul {
+    font-size: 14px;
+  }
+
+  .copy b {
+    min-width: 78px;
+  }
+
+  .form {
+    padding: 16px;
+  }
+
+  .form input,
+  .form select {
+    height: 48px;
+  }
+
+  .form textarea {
+    height: 120px;
+  }
+}
