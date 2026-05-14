@@ -240,14 +240,29 @@
   font-size: var(--fs-small);
 }
 
-.teamCard a {
-  width: 24px;
-  height: 24px;
+.teamLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.teamLinks a {
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border: 1px solid var(--blue);
   border-radius: 50%;
   color: var(--blue);
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.teamLinks a:hover,
+.teamLinks a:focus-visible {
+  color: #fff;
+  background: var(--blue);
+  outline: 0;
+  transform: translateY(-1px);
 }
 
 .servicesSection {
@@ -571,6 +586,24 @@
     grid-template-columns: 1fr;
   }
 
+  .teamCard {
+    padding: 20px;
+  }
+
+  .teamCard p {
+    min-height: 0;
+    margin-bottom: 24px;
+  }
+
+  .teamLinks {
+    gap: 14px;
+  }
+
+  .teamLinks a {
+    width: 44px;
+    height: 44px;
+  }
+
   .valuesGrid {
     gap: 18px;
   }
@@ -637,10 +670,6 @@
   .valueCard span {
     width: 40px;
     height: 40px;
-  }
-
-  .teamCard {
-    padding: 16px;
   }
 
   .cta p {

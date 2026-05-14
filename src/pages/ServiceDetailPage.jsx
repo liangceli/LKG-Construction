@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
@@ -243,6 +243,8 @@ function ServiceDetailTemplate({ service }) {
 function ProjectCarousel({ heading, projects }) {
   const [activePage, setActivePage] = useState(0);
   const [visibleCount, setVisibleCount] = useState(getProjectVisibleCount);
+  const galleryRef = useRef(null);
+  const isMobile = visibleCount === 1;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 680px)');
@@ -265,6 +267,22 @@ function ProjectCarousel({ heading, projects }) {
 
   const activeProjects = pages[activePage] ?? pages[0] ?? [];
 
+  const handleMobileScroll = () => {
+    if (!galleryRef.current || !isMobile) return;
+    const { scrollLeft, clientWidth } = galleryRef.current;
+    setActivePage(Math.round(scrollLeft / clientWidth));
+  };
+
+  const goToPage = (index) => {
+    setActivePage(index);
+    if (galleryRef.current && isMobile) {
+      galleryRef.current.scrollTo({
+        left: galleryRef.current.clientWidth * index,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const goToPrevious = () => {
     setActivePage((currentPage) => (currentPage === 0 ? pages.length - 1 : currentPage - 1));
   };
@@ -285,28 +303,30 @@ function ProjectCarousel({ heading, projects }) {
           <button aria-label="Next project" onClick={goToNext} type="button"><ArrowRight size={18} /></button>
         </div>
       </div>
-      <div className={styles.projectGrid}>
-        {activeProjects.map((project) => (
-          <article className={styles.projectCard} key={`${activePage}-${project.title}`}>
-            <img src={project.image} alt={project.title} />
-            <div>
-              <h3>{project.title}</h3>
-              <p>{project.subtitle}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className={styles.dots} aria-label="Featured project pagination">
-        {pages.map((page, index) => (
-          <button
-            aria-current={activePage === index ? 'true' : undefined}
-            aria-label={`Show project group ${index + 1}`}
-            className={activePage === index ? styles.currentDot : ''}
-            key={page[0].title}
-            onClick={() => setActivePage(index)}
-            type="button"
-          />
-        ))}
+      <div className={styles.projectSlider}>
+        <div className={styles.projectGrid} onScroll={handleMobileScroll} ref={galleryRef}>
+          {(isMobile ? projects : activeProjects).map((project) => (
+            <article className={styles.projectCard} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
+              <img src={project.image} alt={project.title} />
+              <div>
+                <h3>{project.title}</h3>
+                <p>{project.subtitle}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className={styles.dots} aria-label="Featured project pagination">
+          {pages.map((page, index) => (
+            <button
+              aria-current={activePage === index ? 'true' : undefined}
+              aria-label={`Show project group ${index + 1}`}
+              className={activePage === index ? styles.currentDot : ''}
+              key={page[0].title}
+              onClick={() => goToPage(index)}
+              type="button"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

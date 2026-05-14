@@ -5,7 +5,10 @@ import {
   HardHat,
   Layers3,
   Linkedin,
+  Mail,
+  MessageCircle,
   PaintRoller,
+  Phone,
   ShieldCheck,
   SquareStack,
   UsersRound,
@@ -111,7 +114,12 @@ export default function AboutPage() {
               <h3>{member.name}</h3>
               <strong>{member.role}</strong>
               <p>{member.text}</p>
-              <a href="#linkedin" aria-label={`${member.name} LinkedIn`}><Linkedin size={17} /></a>
+              <div className={styles.teamLinks}>
+                <a href="#linkedin" aria-label={`${member.name} LinkedIn`}><Linkedin size={22} /></a>
+                <a href="mailto:jack@lkgconstruction.com.au" aria-label={`Email ${member.name}`}><Mail size={22} /></a>
+                <a href="tel:+61417356789" aria-label={`Call ${member.name}`}><Phone size={22} /></a>
+                <a href="/contact-us" aria-label={`Contact ${member.name}`}><MessageCircle size={22} /></a>
+              </div>
             </article>
           ))}
         </div>

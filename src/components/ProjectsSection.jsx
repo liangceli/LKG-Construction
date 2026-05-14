@@ -67,13 +67,15 @@ export default function ProjectsSection() {
           <button aria-label="Next projects" onClick={goToNext} type="button"><ArrowRight size={18} /></button>
         </div>
       </div>
-      <div className={styles.gallery} onScroll={handleMobileScroll} ref={galleryRef}>
-        {(isMobile ? projects : activeProjects).map((project) => (
-          <article className={styles.card} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-          </article>
-        ))}
+      <div className={styles.slider}>
+        <div className={styles.gallery} onScroll={handleMobileScroll} ref={galleryRef}>
+          {(isMobile ? projects : activeProjects).map((project) => (
+            <article className={styles.card} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
+              <img src={project.image} alt={project.title} />
+              <h3>{project.title}</h3>
+            </article>
+          ))}
+        </div>
         <div className={styles.dots} aria-label="Project gallery pagination">
           {pages.map((page, index) => (
             <button

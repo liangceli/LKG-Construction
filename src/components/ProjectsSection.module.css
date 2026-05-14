@@ -50,13 +50,16 @@
   transform: translateY(-1px);
 }
 
-.gallery {
+.slider {
   position: relative;
+  padding-bottom: 44px;
+}
+
+.gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   justify-content: end;
-  padding-bottom: 44px;
 }
 
 .card {
@@ -193,6 +196,10 @@
     padding-bottom: 64px;
   }
 
+  .slider {
+    padding-bottom: 0;
+  }
+
   .sliderControls {
     display: none;
   }
@@ -216,5 +223,13 @@
     height: auto;
     aspect-ratio: 16 / 10;
     scroll-snap-align: start;
+  }
+
+  .dots {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+    padding-left: 28px;
+    transform: none;
   }
 }

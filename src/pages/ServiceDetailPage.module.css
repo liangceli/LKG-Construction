@@ -211,20 +211,21 @@
 }
 
 .projects {
-  padding: 60px 0 58px;
+  padding: 76px 0 72px;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 46px;
+  align-items: start;
 }
 
 .sectionHead {
-  margin-bottom: 28px;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
+  display: block;
 }
 
 .arrows {
+  margin-top: 34px;
   display: flex;
-  gap: 18px;
+  gap: 16px;
 }
 
 .arrows button {
@@ -243,15 +244,20 @@
   color: var(--blue);
 }
 
+.projectSlider {
+  position: relative;
+  padding-bottom: 44px;
+}
+
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 22px;
 }
 
 .projectCard {
   position: relative;
-  min-height: 196px;
+  height: 292px;
   overflow: hidden;
   border-radius: 6px;
   background: #111;
@@ -283,7 +289,7 @@
 .projectCard h3 {
   margin: 0 0 6px;
   color: #fff;
-  font-size: var(--fs-body);
+  font-size: var(--fs-card-title);
   line-height: 1.25;
   font-weight: 900;
 }
@@ -291,15 +297,18 @@
 .projectCard p {
   margin: 0;
   color: #fff;
-  font-size: var(--fs-small);
+  font-size: var(--fs-card-body);
   font-weight: 650;
 }
 
 .dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   gap: 13px;
-  margin-top: 24px;
 }
 
 .dots button {
@@ -412,9 +421,13 @@
     max-width: 680px;
   }
 
-  .systemGrid,
-  .projectGrid {
+  .systemGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 34px;
   }
 
   .processGrid {
@@ -464,24 +477,61 @@
   }
 
   .systemGrid,
-  .projectGrid,
   .processGrid {
     grid-template-columns: 1fr;
   }
 
   .sectionHead {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .projectCard {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
+    max-width: 620px;
   }
 
   .cta {
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .projects {
+    padding-top: 60px;
+    padding-bottom: 64px;
+  }
+
+  .projectSlider {
+    padding-bottom: 0;
+  }
+
+  .arrows {
+    display: none;
+  }
+
+  .projectGrid {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .projectGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projectCard {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    scroll-snap-align: start;
+  }
+
+  .dots {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+    padding-left: 28px;
+    transform: none;
   }
 }
 
