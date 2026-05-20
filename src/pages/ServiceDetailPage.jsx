@@ -22,6 +22,7 @@ import {
 import ButtonLink from '../components/ButtonLink.jsx';
 import Footer from '../components/Footer.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
+import { projects as siteProjects } from '../data/siteData.js';
 import styles from './ServiceDetailPage.module.css';
 
 const process = [
@@ -33,13 +34,86 @@ const process = [
 ];
 
 const sharedStrengths = [
-  { icon: Wrench, title: 'Expert Installation', text: 'Our experienced installers complete every project to a high standard.' },
-  { icon: ShieldCheck, title: 'Quality Materials', text: 'We use trusted brands and premium materials for long-lasting performance.' },
-  { icon: Clock3, title: 'On Time, Every Time', text: 'We understand the importance of deadlines and deliver on schedule.' },
-  { icon: CheckCircle2, title: 'Safety First', text: 'We follow strict safety standards on every site we work on.' },
+  { icon: MessageSquare, title: '1. Contact Us', text: 'Get in touch with our team to discuss your project requirements, timeline, and site details.' },
+  { icon: ClipboardList, title: '2. Send Us Your Drawings', text: 'Email us your plans, drawings, or project specifications so we can review the scope of work.' },
+  { icon: ClipboardCheck, title: '3. Quote & Planning', text: 'We provide a clear quotation, confirm materials, labour requirements, and organise scheduling for the project.' },
+  { icon: Wrench, title: '4. Start Construction', text: 'Our team arrives on site and completes the plastering work safely, efficiently, and on schedule.' },
+  { icon: CheckCircle2, title: '5. Completion & Handover', text: 'Final checks are completed to ensure quality finishes and the project is delivered ready for handover.' },
 ];
 
 export const serviceDetails = {
+  commercial: {
+    title: 'Commercial',
+    heroText: 'Commercial ceilings, partitions and plastering services delivered with precision for professional spaces.',
+    introText: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.',
+    heroImage: '/assets/project-fitout.png',
+    mainImage: '/assets/about-finished-fitout.png',
+    solutionsTitle: 'Commercial Solutions',
+    systemsHeading: 'Commercial Services\nWe Provide',
+    systemsText: 'We support commercial projects with practical plastering systems built for durability, compliance and presentation.',
+    projectHeading: 'Projects Using Our Commercial Solutions',
+    strengths: sharedStrengths,
+    systems: [
+      { icon: Grid3X3, title: 'Ceilings', text: 'Suspended, grid and feature ceiling systems for commercial interiors.' },
+      { icon: SquareStack, title: 'Partitions', text: 'Metal stud, plasterboard and glass partitions for functional spaces.' },
+      { icon: Layers3, title: 'Linings', text: 'Clean wall and interior linings ready for final finishes.' },
+      { icon: PanelsTopLeft, title: 'Fit-Out Support', text: 'Coordinated plastering works for complete commercial fit-outs.' },
+    ],
+  },
+  education: {
+    title: 'Education',
+    heroText: 'Specialist ceilings, partitions and plastering services for schools and education facilities.',
+    introText: 'We install safe and durable ceiling and partition systems for schools, childcare centres, and education facilities, meeting all compliance requirements.',
+    heroImage: '/assets/about-construction-progress.png',
+    mainImage: '/assets/project-partition.png',
+    solutionsTitle: 'Education Solutions',
+    systemsHeading: 'Education Services\nWe Provide',
+    systemsText: 'We deliver education spaces with strong, maintainable systems suitable for high-use environments.',
+    projectHeading: 'Projects Using Our Education Solutions',
+    strengths: sharedStrengths,
+    systems: [
+      { icon: Grid3X3, title: 'Classroom Ceilings', text: 'Ceiling systems designed for practical learning environments.' },
+      { icon: SquareStack, title: 'Learning Area Partitions', text: 'Partitions that define classrooms, offices and shared areas.' },
+      { icon: PanelsTopLeft, title: 'Acoustic Treatments', text: 'Systems that support comfort and sound control.' },
+      { icon: ShieldCheck, title: 'Safe Site Delivery', text: 'Careful sequencing for active or staged education projects.' },
+    ],
+  },
+  'medical-center': {
+    title: 'Medical Center',
+    heroText: 'High-quality plastering and interior construction for medical and healthcare spaces.',
+    introText: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.',
+    heroImage: '/assets/about-finished-fitout.png',
+    mainImage: '/assets/about-interior.png',
+    solutionsTitle: 'Medical Center Solutions',
+    systemsHeading: 'Medical Center Services\nWe Provide',
+    systemsText: 'We build healthcare interiors with attention to safety, durability and professional presentation.',
+    projectHeading: 'Projects Using Our Medical Center Solutions',
+    strengths: sharedStrengths,
+    systems: [
+      { icon: PanelsTopLeft, title: 'Treatment Room Partitions', text: 'Functional partitions for consult, treatment and support rooms.' },
+      { icon: Grid3X3, title: 'Ceiling Systems', text: 'Ceiling systems coordinated around lighting, services and access.' },
+      { icon: Layers3, title: 'Wall Linings', text: 'Clean linings for durable and professional medical interiors.' },
+      { icon: ShieldCheck, title: 'Quality Finishes', text: 'Reliable finishes suitable for high-use healthcare settings.' },
+    ],
+  },
+  'external-cladding': {
+    title: 'External Cladding',
+    heroText: 'External cladding works delivered with durable materials, clean detailing and dependable workmanship.',
+    introText: 'We install external FC and cladding systems for commercial buildings, ensuring durability, weather resistance, and a professional finish.',
+    heroImage: '/assets/about-cta-ceiling-grid.png',
+    mainImage: '/assets/about-construction-progress.png',
+    solutionsTitle: 'External Cladding Solutions',
+    systemsHeading: 'External Cladding\nWe Provide',
+    systemsText: 'We deliver cladding works with practical detailing, durable materials and consistent finish quality.',
+    projectHeading: 'Projects Using Our External Cladding Solutions',
+    strengths: sharedStrengths,
+    systems: [
+      { icon: PanelsTopLeft, title: 'Facade Cladding', text: 'External cladding systems for commercial and residential facades.' },
+      { icon: Layers3, title: 'Sheeting Systems', text: 'Durable sheeting installed with clean, consistent detailing.' },
+      { icon: ShieldCheck, title: 'Weather Protection', text: 'Cladding solutions selected for performance and longevity.' },
+      { icon: Wrench, title: 'Installation Works', text: 'Carefully managed installation by experienced trades.' },
+    ],
+  },
   ceilings: {
     title: 'Ceilings',
     heroText: 'High-quality ceiling solutions tailored to your project. Built with precision, installed with care.',
@@ -97,7 +171,7 @@ export const serviceDetails = {
   renovations: {
     title: 'Renovations',
     heroText: 'Carefully managed renovation works that refresh existing spaces with minimal disruption.',
-    introText: 'We help clients upgrade, refurbish and reconfigure existing spaces. From ceiling replacements to interior improvements, our team works efficiently while maintaining quality and site safety.',
+    introText: 'We upgrade and reconfigure existing spaces with new ceilings and partition walls, ideal for refurbishments, tenancy changes, and interior improvements.',
     heroImage: '/assets/about-cta-ceiling-grid.png',
     mainImage: '/assets/project-renovation.png',
     solutionsTitle: 'Renovation Solutions',
@@ -132,20 +206,11 @@ export const serviceDetails = {
   },
 };
 
-const defaultProjects = [
-  { title: 'Office Fit-Out - Barangaroo', subtitle: 'Commercial Interior Works', image: '/assets/project-fitout.png' },
-  { title: 'Retail Space - Chadstone', subtitle: 'Ceilings & Partitions', image: '/assets/about-interior.png' },
-  { title: 'Education Facility - Macquarie', subtitle: 'Acoustic Systems', image: '/assets/project-renovation.png' },
-  { title: 'Healthcare Upgrade - South Brisbane', subtitle: 'Partitions & Linings', image: '/assets/about-finished-fitout.png' },
-  { title: 'Commercial Rework - Alexandria', subtitle: 'Ceiling Renovations', image: '/assets/about-construction-progress.png' },
-  { title: 'Office Renewal - Fortitude Valley', subtitle: 'Interior Fit-Out', image: '/assets/project-partition.png' },
-];
-
 const getProjectVisibleCount = () => (window.matchMedia('(max-width: 680px)').matches ? 1 : 3);
 
 export default function ServiceDetailPage({ slug = 'ceilings' }) {
-  const service = serviceDetails[slug] ?? serviceDetails.ceilings;
-  return <ServiceDetailTemplate service={{ ...service, process, projects: defaultProjects }} />;
+  const service = serviceDetails[slug] ?? serviceDetails.commercial;
+  return <ServiceDetailTemplate service={{ ...service, process, projects: siteProjects }} />;
 }
 
 function ServiceDetailTemplate({ service }) {
@@ -306,13 +371,13 @@ function ProjectCarousel({ heading, projects }) {
       <div className={styles.projectSlider}>
         <div className={styles.projectGrid} onScroll={handleMobileScroll} ref={galleryRef}>
           {(isMobile ? projects : activeProjects).map((project) => (
-            <article className={styles.projectCard} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
+            <a className={styles.projectCard} href={project.href} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
               <img src={project.image} alt={project.title} />
               <div>
                 <h3>{project.title}</h3>
                 <p>{project.subtitle}</p>
               </div>
-            </article>
+            </a>
           ))}
         </div>
         <div className={styles.dots} aria-label="Featured project pagination">

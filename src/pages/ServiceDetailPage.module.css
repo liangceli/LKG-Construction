@@ -257,6 +257,7 @@
 
 .projectCard {
   position: relative;
+  display: block;
   height: 292px;
   overflow: hidden;
   border-radius: 6px;

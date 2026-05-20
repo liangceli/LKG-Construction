@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={styles.grid}>
         <div>
           <img className={styles.logo} src="/assets/lkg-logo-transparent-smooth-2x.webp" alt="LKG" />
-          <p>Delivering quality workmanship and dependable construction solutions across ceilings, partitions, linings and renovations.</p>
+          <p>Delivering quality workmanship and dependable plastering solutions across commercial, renovation, education, medical and external cladding projects.</p>
           <div className={styles.socials}>
             <a href="#linkedin" aria-label="LinkedIn"><Linkedin size={18} /></a>
             <a href="#facebook" aria-label="Facebook"><Facebook size={18} /></a>

@@ -7,38 +7,38 @@ import styles from './ServicesPage.module.css';
 const serviceCards = [
   {
     icon: Grid3X3,
-    title: 'Ceilings',
-    href: '/services/ceilings',
+    title: 'Commercial',
+    href: '/services/commercial',
     image: '/assets/project-fitout.png',
-    text: 'Premium ceiling systems for commercial, industrial and residential spaces.',
-  },
-  {
-    icon: SquareStack,
-    title: 'Partitions',
-    href: '/services/partitions',
-    image: '/assets/project-partition.png',
-    text: 'Durable partition systems that shape practical and polished interiors.',
-  },
-  {
-    icon: Layers3,
-    title: 'Linings',
-    href: '/services/linings',
-    image: '/assets/about-construction-progress.png',
-    text: 'Professional wall and interior linings installed for clean, lasting finishes.',
+    text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.',
   },
   {
     icon: PaintRoller,
     title: 'Renovations',
     href: '/services/renovations',
     image: '/assets/project-renovation.png',
-    text: 'Carefully managed renovation works that refresh existing spaces.',
+    text: 'We upgrade and reconfigure existing spaces with new ceilings and partition walls, ideal for refurbishments, tenancy changes, and interior improvements.',
+  },
+  {
+    icon: Layers3,
+    title: 'Education',
+    href: '/services/education',
+    image: '/assets/about-construction-progress.png',
+    text: 'We install safe and durable ceiling and partition systems for schools, childcare centres, and education facilities, meeting all compliance requirements.',
   },
   {
     icon: PanelsTopLeft,
-    title: 'Fit-Outs',
-    href: '/services/fit-outs',
+    title: 'Medical Center',
+    href: '/services/medical-center',
     image: '/assets/about-finished-fitout.png',
-    text: 'Complete interior fit-out support for functional commercial spaces.',
+    text: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.',
+  },
+  {
+    icon: SquareStack,
+    title: 'External Cladding',
+    href: '/services/external-cladding',
+    image: '/assets/project-partition.png',
+    text: 'We install external FC and cladding systems for commercial buildings, ensuring durability, weather resistance, and a professional finish.',
   },
 ];
 
@@ -50,17 +50,17 @@ export default function ServicesPage() {
         <div className={styles.bannerInner}>
           <h1>OUR SERVICES</h1>
           <p className={styles.breadcrumb}><a href="/">Home</a><span>&gt;</span><strong>Our Services</strong></p>
-          <p className={styles.bannerCopy}>Explore our range of premium ceiling solutions designed to meet the unique needs of every project.</p>
+          <p className={styles.bannerCopy}>Explore our range of premium ceilings and partitions services designed to meet the unique needs of every project.</p>
         </div>
       </section>
 
-      <section className={styles.services} id="ceilings">
+      <section className={styles.services} id="services">
         <div className={styles.heading}>
           <div>
-            <p className={styles.kicker}>OUR CEILING SERVICES</p>
-            <h2>Ceiling Solutions Built<br />for Every Space</h2>
+            <p className={styles.kicker}>OUR CEILINGS & PARTITIONS SERVICE</p>
+            <h2>Plastering Solutions Built<br />for Every Space</h2>
           </div>
-          <p>From concept to completion, we deliver precision ceiling systems that combine functionality, durability and modern design.</p>
+          <p>From concept to completion, we deliver professional ceilings, partitions, plastering and cladding solutions across key project sectors.</p>
         </div>
 
         <div className={styles.cardGrid}>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
 
       <section className={styles.cta}>
         <div>
-          <h2>Need Help Choosing the<br />Right Ceiling Solution?</h2>
+          <h2>Need Help Choosing the<br />Right Plastering Solution?</h2>
           <p>Our team is here to guide you to the best solution for your project, budget and timeline.</p>
         </div>
         <ButtonLink href="/contact-us">GET A FREE QUOTE <ArrowRight size={17} /></ButtonLink>

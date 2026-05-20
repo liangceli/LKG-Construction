@@ -33,10 +33,11 @@ const team = [
 ];
 
 const services = [
-  { icon: Layers3, title: 'Ceilings', text: 'Suspended ceilings, grid ceilings, bulkheads and feature ceilings installed with precision.' },
-  { icon: SquareStack, title: 'Partitions', text: 'Metal stud, plasterboard and glass partitions for commercial and residential spaces.' },
-  { icon: SquareStack, title: 'Linings', text: 'Wall linings, shaft linings and specialised linings for a clean and professional finish.' },
-  { icon: PaintRoller, title: 'Renovations', text: 'Complete renovation and refurbishment services to transform your spaces.' },
+  { icon: Layers3, title: 'Commercial', text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.' },
+  { icon: PaintRoller, title: 'Renovations', text: 'We upgrade and reconfigure existing spaces with new ceilings and partition walls, ideal for refurbishments, tenancy changes, and interior improvements.' },
+  { icon: SquareStack, title: 'Education', text: 'We install safe and durable ceiling and partition systems for schools, childcare centres, and education facilities, meeting all compliance requirements.' },
+  { icon: Building2, title: 'Medical Center', text: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.' },
+  { icon: HardHat, title: 'External Cladding', text: 'We install external FC and cladding systems for commercial buildings, ensuring durability, weather resistance, and a professional finish.' },
 ];
 
 const stats = [
@@ -61,7 +62,8 @@ export default function AboutPage() {
         <div className={styles.introCopy}>
           <p className={styles.kicker}>WHO WE ARE</p>
           <h2>Building Quality.<br />Delivering Trust.</h2>
-          <p className={styles.bodyText}>LKG Construction is a Sydney-based construction subcontractor specialising in ceilings, partitions, linings and renovations. With years of experience and a commitment to excellence, we deliver high-quality workmanship on every project.</p>
+          <p className={styles.bodyText}>At LKG Construction, we are a Brisbane based specialist plastering company delivering high quality workmanship across both commercial and residential projects.</p>
+          <p className={styles.bodyText}>With extensive industry experience, our team has successfully completed a wide range of projects including commercial office buildings, schools, aged care facilities, shopping centres, hospitals, and residential renovations.</p>
           <div className={styles.valuesGrid}>
             {values.map(({ icon: Icon, title, text }) => (
               <article className={styles.valueCard} key={title}>
@@ -91,9 +93,8 @@ export default function AboutPage() {
           <div className={styles.storyCopy}>
             <p className={styles.kicker}>OUR STORY</p>
             <h2>Built on Experience.<br />Focused on Excellence.</h2>
-            <p>Founded with a simple goal — to deliver reliable, high-quality construction services — LKG Construction has grown to become one of the most trusted names in the construction industry.</p>
-            <p>We've completed over 1000 projects across a wide range of sectors, including commercial, retail, education, healthcare and residential developments.</p>
-            <p>Our success is built on strong relationships, skilled craftsmanship and a customer-first approach.</p>
+            <p>We pride ourselves on reliability, efficiency, and attention to detail. Whether it's large scale commercial developments or smaller renovation works, we are committed to delivering professional results that meet the highest standards.</p>
+            <p>At LKG Construction, we work closely with builders, developers, and clients to ensure every project is completed on time, within budget, and to specification.</p>
             <ButtonLink href="/contact-us" size="small">GET IN TOUCH <ArrowRight size={15} /></ButtonLink>
           </div>
         </div>
@@ -127,8 +128,8 @@ export default function AboutPage() {
 
       <section className={styles.servicesSection}>
         <p className={styles.kicker}>WHAT WE DO</p>
-        <h2>Specialists in Interior Construction</h2>
-        <p className={styles.centerText}>We provide a complete range of interior fit-out and construction services, tailored to meet the unique needs of each project.</p>
+        <h2>Specialists in Ceilings & Partitions</h2>
+        <p className={styles.centerText}>We provide a complete range of plastering services across commercial, renovation, education, medical and external cladding projects.</p>
         <div className={styles.serviceGrid}>
           {services.map(({ icon: Icon, title, text }) => (
             <article className={styles.serviceItem} key={title}>

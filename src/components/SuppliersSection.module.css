@@ -24,45 +24,17 @@
 }
 
 .supplier {
-  min-height: 52px;
+  height: 72px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #05070b;
-  font-size: 34px;
-  line-height: 1;
-  font-weight: 950;
+  padding: 10px;
 }
 
-.supplier:nth-child(3) {
-  font-size: 38px;
-  letter-spacing: 1px;
-}
-
-.supplier:nth-child(4) {
-  color: #17a6ec;
-  font-style: italic;
-  font-size: 44px;
-}
-
-.supplier:nth-child(n + 5) {
-  font-size: 24px;
-}
-
-.supplier b {
-  font-weight: 500;
-}
-
-.supplier strong {
-  font-weight: 950;
-}
-
-.supplier i {
-  width: 30px;
-  height: 36px;
-  margin-left: 10px;
-  clip-path: polygon(0 0, 100% 22%, 100% 74%, 47% 100%, 0 78%);
-  background: linear-gradient(90deg, #00a859 0 50%, #6ec942 50% 100%);
+.supplier img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .logoRow {
@@ -124,29 +96,7 @@
     scroll-snap-align: center;
     border-radius: 8px;
     background: #fff;
-    font-size: 24px;
     box-shadow: inset 0 0 0 1px #e7ecf5;
-  }
-
-  .logoTrack .supplier:nth-child(n) {
-    font-size: 24px;
-    letter-spacing: 0;
-  }
-
-  .logoTrack .supplier:nth-child(4n) {
-    color: #17a6ec;
-    font-size: 30px;
-    font-style: italic;
-  }
-
-  .logoTrack .supplier:nth-child(4n + 1) {
-    font-size: 22px;
-  }
-
-  .logoTrack .supplier i {
-    width: 22px;
-    height: 28px;
-    margin-left: 8px;
   }
 }
 
@@ -169,20 +119,6 @@
 
   .logos {
     gap: 34px 48px;
-  }
-}
-
-@media (max-width: 430px) {
-  .supplier {
-    font-size: 28px;
-  }
-
-  .supplier:nth-child(3) {
-    font-size: 31px;
-  }
-
-  .supplier:nth-child(4) {
-    font-size: 36px;
   }
 }
 

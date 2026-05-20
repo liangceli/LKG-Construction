@@ -4,11 +4,11 @@ import { navItems } from '../data/siteData.js';
 import styles from './SiteHeader.module.css';
 
 const serviceTabs = [
-  { icon: Grid3X3, label: 'Ceilings', href: '/services/ceilings' },
-  { icon: SquareStack, label: 'Partitions', href: '/services/partitions' },
-  { icon: Layers3, label: 'Linings', href: '/services/linings' },
+  { icon: Grid3X3, label: 'Commercial', href: '/services/commercial' },
   { icon: PaintRoller, label: 'Renovations', href: '/services/renovations' },
-  { icon: PanelsTopLeft, label: 'Fit-Outs', href: '/services/fit-outs' },
+  { icon: Layers3, label: 'Education', href: '/services/education' },
+  { icon: PanelsTopLeft, label: 'Medical Center', href: '/services/medical-center' },
+  { icon: SquareStack, label: 'External Cladding', href: '/services/external-cladding' },
 ];
 
 export default function SiteHeader({ active = 'Home', compact = false }) {
@@ -77,6 +77,7 @@ export default function SiteHeader({ active = 'Home', compact = false }) {
               </div>
             )}
             <a href="/about-us">About Us</a>
+            <a href="/projects">Our Projects</a>
             <a href="/contact-us">Contact Us</a>
             <a href="/contact-us">Get a Free Quote</a>
           </div>

@@ -1,0 +1,56 @@
+.banner {
+  min-height: 390px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(0, 10, 22, 0.92) 0%, rgba(0, 10, 22, 0.78) 42%, rgba(0, 10, 22, 0.44) 100%),
+    url("/assets/project-emf-1.png") center / cover;
+}
+
+.bannerInner {
+  width: min(var(--content-width), calc(100% - var(--content-gutter)));
+  margin: 0 auto;
+  padding: 48px 0 78px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.breadcrumb a,
+.breadcrumb strong {
+  color: inherit;
+}
+
+.breadcrumb strong {
+  color: var(--blue-bright);
+}
+
+.banner h1 {
+  max-width: 640px;
+  margin: 0 0 20px;
+  font-size: var(--fs-hero-inner);
+  line-height: 1.08;
+}
+
+.bannerInner > p:last-child {
+  max-width: 520px;
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+@media (max-width: 680px) {
+  .banner {
+    min-height: 330px;
+  }
+
+  .bannerInner {
+    padding: 38px 0 56px;
+  }
+}

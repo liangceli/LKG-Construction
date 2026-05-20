@@ -70,10 +70,10 @@ export default function ProjectsSection() {
       <div className={styles.slider}>
         <div className={styles.gallery} onScroll={handleMobileScroll} ref={galleryRef}>
           {(isMobile ? projects : activeProjects).map((project) => (
-            <article className={styles.card} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
+            <a className={styles.card} href={project.href} key={`${isMobile ? 'mobile' : activePage}-${project.title}`}>
               <img src={project.image} alt={project.title} />
               <h3>{project.title}</h3>
-            </article>
+            </a>
           ))}
         </div>
         <div className={styles.dots} aria-label="Project gallery pagination">

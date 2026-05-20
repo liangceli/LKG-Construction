@@ -15,7 +15,7 @@ export default function HeroSection() {
       <SiteHeader active="Home" />
 
       <div className={styles.content} id="home">
-        <p className={styles.eyebrow}>CEILINGS | PARTITIONS | LININGS | RENOVATIONS</p>
+        <p className={styles.eyebrow}>COMMERCIAL | RENOVATIONS | EDUCATION | MEDICAL CENTER | EXTERNAL CLADDING</p>
         <h1>
           Reliable construction
           <span>services to build</span>

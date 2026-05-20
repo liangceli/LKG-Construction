@@ -2,18 +2,12 @@ import { supplierRows } from '../data/siteData.js';
 import SectionTitle from './SectionTitle.jsx';
 import styles from './SuppliersSection.module.css';
 
-function SupplierLogo({ name }) {
-  if (name === 'USG') {
-    return (
-      <span className={styles.supplier}>
-        <b>USG</b>
-        <strong>BORAL</strong>
-        <i />
-      </span>
-    );
-  }
-
-  return <span className={styles.supplier}>{name}</span>;
+function SupplierLogo({ supplier }) {
+  return (
+    <span className={styles.supplier}>
+      <img src={supplier.image} alt={supplier.name} />
+    </span>
+  );
 }
 
 export default function SuppliersSection() {
@@ -25,12 +19,12 @@ export default function SuppliersSection() {
       </div>
       <div className={styles.logos} aria-label="Supplier brands">
         {supplierRows.map((row, rowIndex) =>
-          row.map((name) => <SupplierLogo name={name} key={`desktop-${rowIndex}-${name}`} />),
+          row.map((supplier) => <SupplierLogo supplier={supplier} key={`desktop-${rowIndex}-${supplier.name}`} />),
         )}
         {supplierRows.map((row, rowIndex) => (
           <div className={`${styles.logoRow} ${rowIndex === 1 ? styles.reverse : ''}`} key={`mobile-row-${rowIndex}`}>
             <div className={styles.logoTrack}>
-              {[...row, ...row].map((name, index) => <SupplierLogo name={name} key={`${rowIndex}-${name}-${index}`} />)}
+              {[...row, ...row].map((supplier, index) => <SupplierLogo supplier={supplier} key={`${rowIndex}-${supplier.name}-${index}`} />)}
             </div>
           </div>
         ))}
