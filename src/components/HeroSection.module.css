@@ -21,7 +21,9 @@
 .heroBg {
   position: absolute;
   inset: 0 0 0 30%;
-  background: url("/assets/hero-space.png") center/cover no-repeat;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
   filter: saturate(0.95) contrast(1.08);
   mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 7%, rgba(0, 0, 0, 0.45) 17%, #000 34%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 7%, rgba(0, 0, 0, 0.45) 17%, #000 34%);
@@ -210,6 +212,7 @@
 
   .heroBg {
     inset: 0;
+    width: 100%;
     opacity: 0.42;
   }
 
@@ -260,7 +263,6 @@
 @media (max-width: 860px) {
   .hero {
     min-height: auto;
-    background: url("/assets/hero-space.png") center/cover no-repeat;
   }
 
   .hero::before {
@@ -270,8 +272,8 @@
   }
 
   .heroBg {
-    display: none;
     inset: 0;
+    width: 100%;
     opacity: 1;
     mask-image: none;
     -webkit-mask-image: none;

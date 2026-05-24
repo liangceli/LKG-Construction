@@ -11,7 +11,9 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className={styles.hero}>
-      <div className={styles.heroBg} aria-hidden="true" />
+      <video className={styles.heroBg} aria-hidden="true" autoPlay muted loop playsInline poster="/assets/hero-space.png">
+        <source src="/assets/hero-video-2.mp4" type="video/mp4" />
+      </video>
       <SiteHeader active="Home" />
 
       <div className={styles.content} id="home">
