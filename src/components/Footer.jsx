@@ -1,4 +1,4 @@
-import { Clock3, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { BadgeCheck, Clock3, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { quickLinks, services } from '../data/siteData.js';
 import styles from './Footer.module.css';
 
@@ -22,6 +22,7 @@ export default function Footer() {
           <p><Phone size={14} /> +61 417 356 789</p>
           <p><Mail size={14} /> jack@lkgconstruction.com.au</p>
           <p><MapPin size={14} /> Brisbane QLD, Australia</p>
+          <p><BadgeCheck size={14} /> ABN: 98 677 525 165<br />QBCC: 15454061</p>
           <p><Clock3 size={14} /> Mon - Fri&nbsp;&nbsp; 7:00am - 5:00pm<br />Sat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am - 5:00pm</p>
         </div>
       </div>

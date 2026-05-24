@@ -34,6 +34,11 @@ const contactItems = [
     title: 'Business Hours',
     lines: ['Mon - Fri      7:00am - 5:00pm', 'Sat            9:00am - 5:00pm'],
   },
+  {
+    icon: CheckCircle2,
+    title: 'ABN & QBCC',
+    lines: ['ABN: 98 677 525 165', 'QBCC: 15454061'],
+  },
 ];
 
 const supportItems = [
