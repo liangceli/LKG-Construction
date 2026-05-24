@@ -133,9 +133,10 @@
   display: grid;
   place-items: center;
   border-radius: 7px;
+  border: 1px solid #d4def4;
   color: var(--blue);
-  background: #f3f6ff;
-  box-shadow: 0 12px 24px rgba(12, 40, 90, 0.08);
+  background: #e4ebfb;
+  box-shadow: 0 12px 24px rgba(12, 40, 90, 0.14);
 }
 
 .card h3 {

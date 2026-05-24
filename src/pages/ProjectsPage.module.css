@@ -33,8 +33,9 @@
 .banner h1 {
   max-width: 640px;
   margin: 0 0 20px;
-  font-size: var(--fs-hero-inner);
-  line-height: 1.08;
+  font-size: var(--fs-page-title);
+  line-height: 1;
+  font-weight: 900;
 }
 
 .bannerInner > p:last-child {
@@ -52,5 +53,9 @@
 
   .bannerInner {
     padding: 38px 0 56px;
+  }
+
+  .banner h1 {
+    font-size: var(--fs-page-title-mobile);
   }
 }

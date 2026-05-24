@@ -210,7 +210,8 @@ const getProjectVisibleCount = () => (window.matchMedia('(max-width: 680px)').ma
 
 export default function ServiceDetailPage({ slug = 'ceilings' }) {
   const service = serviceDetails[slug] ?? serviceDetails.commercial;
-  return <ServiceDetailTemplate service={{ ...service, process, projects: siteProjects }} />;
+  const serviceProjects = siteProjects.filter((project) => project.serviceSlug === slug);
+  return <ServiceDetailTemplate service={{ ...service, process, projects: serviceProjects.length ? serviceProjects : siteProjects }} />;
 }
 
 function ServiceDetailTemplate({ service }) {
