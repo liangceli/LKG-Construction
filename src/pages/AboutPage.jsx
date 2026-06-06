@@ -4,11 +4,8 @@ import {
   Clock3,
   HardHat,
   Layers3,
-  Linkedin,
   Mail,
-  MessageCircle,
   PaintRoller,
-  Phone,
   ShieldCheck,
   SquareStack,
   UsersRound,
@@ -26,10 +23,10 @@ const values = [
 ];
 
 const team = [
-  { name: 'Luke Gauci', role: 'Director', image: '/assets/team-luke-gauci.png', text: 'With over 15 years in the industry, Luke leads LKG Construction with a focus on quality, integrity and client satisfaction.' },
-  { name: 'Kane Gauci', role: 'Director', image: '/assets/team-kane-gauci.png', text: 'Kane oversees project delivery and operations, ensuring every project runs smoothly from start to finish.' },
-  { name: 'Chantelle Gauci', role: 'Business Manager', image: '/assets/team-chantelle-gauci.png', text: 'Chantelle manages business operations and client relations, keeping everything organised and on track.' },
-  { name: 'Daniel Gauci', role: 'Project Manager', image: '/assets/team-daniel-gauci.png', text: 'Daniel brings experience and attention to detail to manage projects and deliver exceptional results.' },
+  { id: 'jack-liu', name: 'Jack Liu', role: 'Director', email: 'jack@lkgconstruction.com.au', image: '/assets/team-jack-liu.jpg' },
+  { id: 'ivy-wang', name: 'Ivy Wang', role: 'Manager', email: 'Ivy@lkgconstruction.com.au', image: '/assets/team-ivy-wang.jpg' },
+  { id: 'hamit-arkin', name: 'Hamit Arkin', role: 'Project supervisor', email: 'hamit@lkgconstruction.com.au', image: '/assets/team-hamit-arkin.jpg' },
+  { id: 'estimator', name: '', role: '', email: '', image: '' },
 ];
 
 const services = [
@@ -106,21 +103,19 @@ export default function AboutPage() {
         <p className={styles.centerText}>Our team of professionals bring passion, experience and leadership to every project we deliver.</p>
         <div className={styles.teamGrid}>
           {team.map((member) => (
-            <article className={styles.teamCard} key={member.name}>
+            <article className={styles.teamCard} key={member.id}>
               {member.image ? (
                 <img className={styles.portrait} src={member.image} alt={`${member.name}, ${member.role}`} />
               ) : (
-                <div className={styles.portrait} aria-label={`${member.name} image placeholder`} />
+                <div className={styles.portrait} aria-label="Team member image placeholder" />
               )}
-              <h3>{member.name}</h3>
-              <strong>{member.role}</strong>
-              <p>{member.text}</p>
-              <div className={styles.teamLinks}>
-                <a href="#linkedin" aria-label={`${member.name} LinkedIn`}><Linkedin size={22} /></a>
-                <a href="mailto:jack@lkgconstruction.com.au" aria-label={`Email ${member.name}`}><Mail size={22} /></a>
-                <a href="tel:+61417356789" aria-label={`Call ${member.name}`}><Phone size={22} /></a>
-                <a href="/contact-us" aria-label={`Contact ${member.name}`}><MessageCircle size={22} /></a>
-              </div>
+              <h3>{member.name || '\u00a0'}</h3>
+              <strong>{member.role || '\u00a0'}</strong>
+              {member.email && (
+                <div className={styles.teamLinks}>
+                  <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}><Mail size={22} /></a>
+                </div>
+              )}
             </article>
           ))}
         </div>
