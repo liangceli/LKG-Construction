@@ -17,11 +17,11 @@ export default function HeroSection() {
       <SiteHeader active="Home" />
 
       <div className={styles.content} id="home">
-        <p className={styles.eyebrow}>COMMERCIAL | RENOVATIONS | EDUCATION | MEDICAL CENTER | EXTERNAL CLADDING</p>
+        <p className={styles.eyebrow}>COMMERCIAL | RENOVATIONS | EDUCATION | MEDICAL CENTRE | EXTERNAL CLADDING</p>
         <h1>
           Reliable construction
-          <span>services to build</span>
-          <strong>your dreams.</strong>
+          <span>services built on</span>
+          <strong>quality workmanship.</strong>
         </h1>
         <p className={styles.copy}>Delivering quality workmanship, practical expertise and dependable service on every project.</p>
         <div className={styles.actions}>

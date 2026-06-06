@@ -220,6 +220,12 @@
   cursor: pointer;
 }
 
+.form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+  box-shadow: none;
+}
+
 .mapSection {
   position: relative;
   height: 430px;

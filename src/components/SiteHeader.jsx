@@ -7,7 +7,7 @@ const serviceTabs = [
   { icon: Grid3X3, label: 'Commercial', href: '/services/commercial' },
   { icon: PaintRoller, label: 'Renovations', href: '/services/renovations' },
   { icon: Layers3, label: 'Education', href: '/services/education' },
-  { icon: PanelsTopLeft, label: 'Medical Center', href: '/services/medical-center' },
+  { icon: PanelsTopLeft, label: 'Medical Centre', href: '/services/medical-center' },
   { icon: SquareStack, label: 'External Cladding', href: '/services/external-cladding' },
 ];
 

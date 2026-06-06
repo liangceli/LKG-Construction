@@ -19,8 +19,8 @@ export const projects = [
   { title: 'Springfield Lakes State School', subtitle: 'Education', serviceSlug: 'education', slug: 'springfield-lakes-state-school', href: '/projects/springfield-lakes-state-school', image: '/assets/project-springfield-lakes-state-school-1.jpg' },
   { title: "All Hallows' School", subtitle: 'Education', serviceSlug: 'education', slug: 'all-hallows-school', href: '/projects/all-hallows-school', image: '/assets/project-all-hallows-school-1.jpg' },
   { title: 'Seasons Sinnamon Park', subtitle: 'Medical Centre', serviceSlug: 'medical-center', slug: 'seasons-sinnamon-park', href: '/projects/seasons-sinnamon-park', image: '/assets/project-seasons-sinnamon-park-1.jpg' },
-  { title: 'New build shopping centre at Graf Drive', subtitle: 'External Cladding', serviceSlug: 'external-cladding', slug: 'new-build-shopping-centre-at-graf-drive', href: '/projects/new-build-shopping-centre-at-graf-drive', image: '/assets/project-graf-drive-shopping-centre-1.jpg' },
-  { title: 'shopping centre FC install', subtitle: 'External Cladding', serviceSlug: 'external-cladding', slug: 'shopping-centre-fc-install', href: '/projects/shopping-centre-fc-install', image: '/assets/project-shopping-centre-fc-install-1.jpg' },
+  { title: 'New Build Shopping Centre at Graf Drive', subtitle: 'External Cladding', serviceSlug: 'external-cladding', slug: 'new-build-shopping-centre-at-graf-drive', href: '/projects/new-build-shopping-centre-at-graf-drive', image: '/assets/project-graf-drive-shopping-centre-1.jpg' },
+  { title: 'Shopping Centre FC Install', subtitle: 'External Cladding', serviceSlug: 'external-cladding', slug: 'shopping-centre-fc-install', href: '/projects/shopping-centre-fc-install', image: '/assets/project-shopping-centre-fc-install-1.jpg' },
 ];
 
 export const supplierRows = [
@@ -48,6 +48,6 @@ export const services = [
   { label: 'Commercial', href: '/services/commercial' },
   { label: 'Renovations', href: '/services/renovations' },
   { label: 'Education', href: '/services/education' },
-  { label: 'Medical Center', href: '/services/medical-center' },
+  { label: 'Medical Centre', href: '/services/medical-center' },
   { label: 'External Cladding', href: '/services/external-cladding' },
 ];

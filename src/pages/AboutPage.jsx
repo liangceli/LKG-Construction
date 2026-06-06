@@ -21,7 +21,7 @@ import styles from './AboutPage.module.css';
 const values = [
   { icon: ShieldCheck, title: 'Quality Workmanship', text: 'We take pride in our attention to detail and superior finishes.' },
   { icon: UsersRound, title: 'Experienced Team', text: 'Our skilled team brings expertise to projects of all sizes.' },
-  { icon: Clock3, title: 'On Time, Every Time', text: 'We understand the importance of deadlines and deliver.' },
+  { icon: Clock3, title: 'Reliable Scheduling', text: 'We understand the importance of deadlines and deliver.' },
   { icon: Building2, title: 'Customer Focused', text: 'We work closely with our clients to bring their vision to life.' },
 ];
 
@@ -33,10 +33,10 @@ const team = [
 ];
 
 const services = [
-  { icon: Layers3, title: 'Commercial', text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.' },
+  { icon: Layers3, title: 'Commercial', text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across Greater Brisbane.' },
   { icon: PaintRoller, title: 'Renovations', text: 'We upgrade and reconfigure existing spaces with new ceilings and partition walls, ideal for refurbishments, tenancy changes, and interior improvements.' },
   { icon: SquareStack, title: 'Education', text: 'We install safe and durable ceiling and partition systems for schools, childcare centres, and education facilities, meeting all compliance requirements.' },
-  { icon: Building2, title: 'Medical Center', text: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.' },
+  { icon: Building2, title: 'Medical Centre', text: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.' },
   { icon: HardHat, title: 'External Cladding', text: 'We install external FC and cladding systems for commercial buildings, ensuring durability, weather resistance, and a professional finish.' },
 ];
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
         <div className={styles.introCopy}>
           <p className={styles.kicker}>WHO WE ARE</p>
           <h2>Building Quality.<br />Delivering Trust.</h2>
-          <p className={styles.bodyText}>At LKG Construction, we are a Brisbane based specialist plastering company delivering high quality workmanship across both commercial and residential projects.</p>
+          <p className={styles.bodyText}>At LKG Construction, we are a Brisbane-based specialist plastering company delivering high quality workmanship across both commercial and residential projects.</p>
           <p className={styles.bodyText}>With extensive industry experience, our team has successfully completed a wide range of projects including commercial office buildings, schools, aged care facilities, shopping centres, hospitals, and residential renovations.</p>
           <div className={styles.valuesGrid}>
             {values.map(({ icon: Icon, title, text }) => (

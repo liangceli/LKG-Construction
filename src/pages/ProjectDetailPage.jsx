@@ -33,7 +33,7 @@ export const projectDetails = {
     title: 'Noosa Civic Shopping Centre',
     heroText: 'Shopping centre refurbishment and retail fit-out works delivered for a busy commercial environment.',
     heroImage: '/assets/project-noosa-1.jpg',
-    overview: 'We do shopping centre refurbishments and retail fit-outs, including walls, ceilings, bulkheads, patching, setting, and finishing. Our team works fast, clean, and on schedule, with experience working in busy shopping centres and commercial sites.',
+    overview: 'We deliver shopping centre refurbishments and retail fit-outs, including walls, ceilings, bulkheads, patching, setting and finishing. Our team works efficiently and cleanly to keep busy commercial sites running safely and on schedule.',
     mainImage: '/assets/project-noosa-2.jpg',
     gallery: [
       '/assets/project-noosa-1.jpg',
@@ -299,7 +299,7 @@ export const projectDetails = {
     size: 'Healthcare Fit-Out',
   }),
   'new-build-shopping-centre-at-graf-drive': makeProject({
-    title: 'New build shopping centre at Graf Drive',
+    title: 'New Build Shopping Centre at Graf Drive',
     heroText: 'External cladding and soffit lining works delivered for a new shopping centre build.',
     heroImage: '/assets/project-graf-drive-shopping-centre-1.jpg',
     overview: 'We completed external cladding and soffit lining works for this new build shopping centre at Graf Drive. The works included fibre cement sheeting, exterior soffit linings, framing coordination, ceiling linings, access equipment coordination, and finishing support across the new retail build.',
@@ -320,7 +320,7 @@ export const projectDetails = {
     size: 'New Build Shopping Centre',
   }),
   'shopping-centre-fc-install': makeProject({
-    title: 'shopping centre FC install',
+    title: 'Shopping Centre FC Install',
     heroText: 'FC cladding installation works delivered for a shopping centre external facade and roofline areas.',
     heroImage: '/assets/project-shopping-centre-fc-install-1.jpg',
     overview: 'We completed shopping centre FC installation works, including fibre cement cladding, external wall sheeting, roofline and parapet linings, service coordination, and finishing support. The works were delivered with clean joint detailing and durable exterior finishes.',
@@ -337,113 +337,9 @@ export const projectDetails = {
     type: 'External Cladding',
     size: 'Shopping Centre FC Install',
   }),
-  'commercial-fit-out': makeProject({
-    title: 'Commercial Fit-Out',
-    heroText: 'A polished commercial fit-out with ceiling systems, partitions and practical interior finishes delivered for a modern workplace.',
-    heroImage: '/assets/project-fitout.png',
-    overview: 'This commercial fit-out brought together ceiling installation, partition coordination and interior lining works to create a durable, functional and professional workspace. The delivery focused on clean detailing, practical access to services and a finish suited to everyday commercial use.',
-    mainImage: '/assets/project-fitout.png',
-    gallery: ['/assets/about-interior.png', '/assets/about-finished-fitout.png', '/assets/project-partition.png', '/assets/project-renovation.png', '/assets/about-construction-progress.png'],
-    location: 'Sydney, NSW',
-    date: 'March 2024',
-    scope: 'Ceilings, Partitions, Linings',
-    type: 'Commercial Fit-Out',
-    size: '1,250m²',
-  }),
-  'office-fit-out-barangaroo': makeProject({
-    title: 'Office Fit-Out - Barangaroo',
-    heroText: 'A modern office fit-out featuring suspended ceilings, acoustic solutions and custom finishes to create a functional and professional workspace.',
-    heroImage: '/assets/project-fitout.png',
-    overview: 'This fit-out project in Barangaroo involved the supply and installation of high-quality suspended ceilings, acoustic treatments, partitions and custom linings. The result is a contemporary workspace designed for comfort, productivity and long-term durability.',
-    mainImage: '/assets/about-finished-fitout.png',
-    gallery: ['/assets/about-interior.png', '/assets/project-partition.png', '/assets/project-renovation.png', '/assets/about-finished-fitout.png', '/assets/project-fitout.png'],
-    location: 'Barangaroo, NSW',
-    date: 'March 2024',
-    scope: 'Ceilings, Partitions, Linings, Acoustic Solutions',
-    type: 'Commercial Office Fit-Out',
-    size: '1,250m²',
-  }),
-  'partition-upgrade': makeProject({
-    title: 'Partition Upgrade',
-    heroText: 'A clean partition upgrade designed to improve workspace flow, privacy and long-term interior performance.',
-    heroImage: '/assets/project-partition.png',
-    overview: 'This partition upgrade included metal stud framing, plasterboard linings and detailed coordination around existing services. The finished spaces support better workplace zoning while maintaining a sharp, professional appearance.',
-    mainImage: '/assets/project-partition.png',
-    gallery: ['/assets/about-partition-framing.png', '/assets/about-finished-fitout.png', '/assets/project-fitout.png', '/assets/about-interior.png', '/assets/project-renovation.png'],
-    location: 'Alexandria, NSW',
-    date: 'April 2024',
-    scope: 'Partitions, Linings, Framing',
-    type: 'Commercial Partition Upgrade',
-    size: '820m²',
-  }),
-  'renovation-works': makeProject({
-    title: 'Renovation Works',
-    heroText: 'A practical renovation package refreshing existing interiors with minimal disruption and reliable finishes.',
-    heroImage: '/assets/project-renovation.png',
-    overview: 'This renovation project involved reworking existing interior areas, upgrading ceiling and wall finishes, and coordinating new construction elements around an active building environment.',
-    mainImage: '/assets/project-renovation.png',
-    gallery: ['/assets/about-cta-ceiling-grid.png', '/assets/about-construction-progress.png', '/assets/project-partition.png', '/assets/about-finished-fitout.png', '/assets/project-fitout.png'],
-    location: 'Brisbane, QLD',
-    date: 'May 2024',
-    scope: 'Renovations, Ceilings, Linings',
-    type: 'Interior Renovation',
-    size: '940m²',
-  }),
-  'ceiling-installation': makeProject({
-    title: 'Ceiling Installation',
-    heroText: 'A precise ceiling installation using suspended systems and clean service integration.',
-    heroImage: '/assets/about-partition-framing.png',
-    overview: 'This ceiling installation focused on a clean suspended ceiling finish, coordinated lighting and service access, and durable materials selected for commercial performance.',
-    mainImage: '/assets/about-finished-fitout.png',
-    gallery: ['/assets/project-partition.png', '/assets/about-cta-ceiling-grid.png', '/assets/about-interior.png', '/assets/project-fitout.png', '/assets/project-renovation.png'],
-    location: 'Parramatta, NSW',
-    date: 'June 2024',
-    scope: 'Suspended Ceilings, Acoustic Panels',
-    type: 'Ceiling Installation',
-    size: '1,100m²',
-  }),
-  'office-refurbishment': makeProject({
-    title: 'Office Refurbishment',
-    heroText: 'A workplace refurbishment upgrading finishes, layout and ceiling details for a more practical office environment.',
-    heroImage: '/assets/project-renovation.png',
-    overview: 'This office refurbishment refreshed existing work areas with updated partitions, ceiling finishes and interior linings. The project improved daily usability while keeping the finish consistent and professional.',
-    mainImage: '/assets/about-interior.png',
-    gallery: ['/assets/project-renovation.png', '/assets/about-finished-fitout.png', '/assets/project-fitout.png', '/assets/project-partition.png', '/assets/about-construction-progress.png'],
-    location: 'North Sydney, NSW',
-    date: 'July 2024',
-    scope: 'Refurbishment, Partitions, Ceilings',
-    type: 'Office Refurbishment',
-    size: '760m²',
-  }),
-  'interior-linings': makeProject({
-    title: 'Interior Linings',
-    heroText: 'Clean interior lining works for walls, columns and detailed commercial surfaces.',
-    heroImage: '/assets/project-fitout.png',
-    overview: 'This interior linings package delivered smooth wall finishes, careful detailing around openings and consistent surfaces ready for final fit-out works.',
-    mainImage: '/assets/project-fitout.png',
-    gallery: ['/assets/about-construction-progress.png', '/assets/about-partition-framing.png', '/assets/about-finished-fitout.png', '/assets/project-renovation.png', '/assets/about-interior.png'],
-    location: 'Waterloo, NSW',
-    date: 'August 2024',
-    scope: 'Wall Linings, Shaft Linings, Finishes',
-    type: 'Interior Linings',
-    size: '680m²',
-  }),
-  'retail-fit-out': makeProject({
-    title: 'Retail Fit-Out',
-    heroText: 'A retail fit-out built around clean presentation, practical layout and durable interior systems.',
-    heroImage: '/assets/project-renovation.png',
-    overview: 'This retail fit-out combined ceiling systems, interior partitions and lining works to create a customer-facing space with a clean, reliable finish.',
-    mainImage: '/assets/about-finished-fitout.png',
-    gallery: ['/assets/about-interior.png', '/assets/project-fitout.png', '/assets/project-renovation.png', '/assets/project-partition.png', '/assets/about-cta-ceiling-grid.png'],
-    location: 'Chadstone, VIC',
-    date: 'September 2024',
-    scope: 'Fit-Out, Ceilings, Partitions',
-    type: 'Retail Fit-Out',
-    size: '540m²',
-  }),
 };
 
-export default function ProjectDetailPage({ slug = 'office-fit-out-barangaroo' }) {
+export default function ProjectDetailPage({ slug = 'noosa-civic-shopping-centre' }) {
   const project = projectDetails[slug] ?? projectDetails['noosa-civic-shopping-centre'];
 
   return (
@@ -484,7 +380,7 @@ export default function ProjectDetailPage({ slug = 'office-fit-out-barangaroo' }
 
       <section className={styles.gallery} aria-label={`${project.title} gallery`}>
         {project.gallery.map((image, index) => (
-          <img src={image} alt={`${project.title} gallery ${index + 1}`} key={`${image}-${index}`} />
+          <img src={image} alt={`${project.title} gallery ${index + 1}`} key={`${image}-${index}`} loading="lazy" />
         ))}
       </section>
 

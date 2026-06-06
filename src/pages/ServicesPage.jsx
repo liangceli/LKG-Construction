@@ -10,7 +10,7 @@ const serviceCards = [
     title: 'Commercial',
     href: '/services/commercial',
     image: '/assets/project-fitout.png',
-    text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.',
+    text: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across Greater Brisbane.',
   },
   {
     icon: PaintRoller,
@@ -28,7 +28,7 @@ const serviceCards = [
   },
   {
     icon: PanelsTopLeft,
-    title: 'Medical Center',
+    title: 'Medical Centre',
     href: '/services/medical-center',
     image: '/assets/about-finished-fitout.png',
     text: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.',
@@ -50,7 +50,7 @@ export default function ServicesPage() {
         <div className={styles.bannerInner}>
           <h1>OUR SERVICES</h1>
           <p className={styles.breadcrumb}><a href="/">Home</a><span>&gt;</span><strong>Our Services</strong></p>
-          <p className={styles.bannerCopy}>Explore our range of premium ceilings and partitions services designed to meet the unique needs of every project.</p>
+          <p className={styles.bannerCopy}>Explore our range of premium ceiling and partition services designed to meet the needs of every project.</p>
         </div>
       </section>
 

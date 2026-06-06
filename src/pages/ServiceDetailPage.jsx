@@ -45,7 +45,7 @@ export const serviceDetails = {
   commercial: {
     title: 'Commercial',
     heroText: 'Commercial ceilings, partitions and plastering services delivered with precision for professional spaces.',
-    introText: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across all Brisbane.',
+    introText: 'We specialise in commercial plastering for shopping centres, retail stores, offices, warehouses, apartments, and large scale projects across Greater Brisbane.',
     heroImage: '/assets/project-fitout.png',
     mainImage: '/assets/about-finished-fitout.png',
     solutionsTitle: 'Commercial Solutions',
@@ -79,15 +79,15 @@ export const serviceDetails = {
     ],
   },
   'medical-center': {
-    title: 'Medical Center',
+    title: 'Medical Centre',
     heroText: 'High-quality plastering and interior construction for medical and healthcare spaces.',
     introText: 'We deliver clean, precise, and hygienic finishes for medical centres, clinics, and healthcare spaces with minimal disruption.',
     heroImage: '/assets/about-finished-fitout.png',
     mainImage: '/assets/about-interior.png',
-    solutionsTitle: 'Medical Center Solutions',
-    systemsHeading: 'Medical Center Services\nWe Provide',
+    solutionsTitle: 'Medical Centre Solutions',
+    systemsHeading: 'Medical Centre Services\nWe Provide',
     systemsText: 'We build healthcare interiors with attention to safety, durability and professional presentation.',
-    projectHeading: 'Projects Using Our Medical Center Solutions',
+    projectHeading: 'Projects Using Our Medical Centre Solutions',
     strengths: sharedStrengths,
     systems: [
       { icon: PanelsTopLeft, title: 'Treatment Room Partitions', text: 'Functional partitions for consult, treatment and support rooms.' },
@@ -365,8 +365,8 @@ function ProjectCarousel({ heading, projects }) {
           <h2>{heading}</h2>
         </div>
         <div className={styles.arrows}>
-          <button aria-label="Previous project" onClick={goToPrevious} type="button"><ArrowLeft size={18} /></button>
-          <button aria-label="Next project" onClick={goToNext} type="button"><ArrowRight size={18} /></button>
+          <button aria-label="Previous projects" onClick={goToPrevious} type="button"><ArrowLeft size={18} /></button>
+          <button aria-label="Next projects" onClick={goToNext} type="button"><ArrowRight size={18} /></button>
         </div>
       </div>
       <div className={styles.projectSlider}>
@@ -385,7 +385,7 @@ function ProjectCarousel({ heading, projects }) {
           {pages.map((page, index) => (
             <button
               aria-current={activePage === index ? 'true' : undefined}
-              aria-label={`Show project group ${index + 1}`}
+              aria-label={`Go to project slide ${index + 1}`}
               className={activePage === index ? styles.currentDot : ''}
               key={page[0].title}
               onClick={() => goToPage(index)}

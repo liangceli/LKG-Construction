@@ -28,11 +28,6 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <span>© 2024 LKG Construction. All Rights Reserved.</span>
-        <nav>
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms & Conditions</a>
-          <a href="#sitemap">Site Map</a>
-        </nav>
       </div>
     </footer>
   );

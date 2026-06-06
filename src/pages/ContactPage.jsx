@@ -17,7 +17,7 @@ const contactItems = [
   {
     icon: MapPin,
     title: 'Address',
-    lines: ['Suite 2.01, 34-36 Ralph Street', 'Alexandria NSW 2015, Australia'],
+    lines: ['Brisbane QLD, Australia'],
   },
   {
     icon: Phone,
@@ -98,14 +98,15 @@ export default function ContactPage() {
             </select>
             <ChevronDown size={18} />
           </label>
-          <button type="button">SEND ENQUIRY</button>
+          <p>Online enquiry form coming soon. Please contact us by phone or email for now.</p>
+          <button disabled type="button">SEND ENQUIRY</button>
         </form>
       </section>
 
       <section className={styles.mapSection} aria-label="Our location">
         <iframe
-          title="LKG Construction location in Alexandria"
-          src="https://maps.google.com/maps?hl=en&q=Suite%202.01%2C%2034-36%20Ralph%20Street%2C%20Alexandria%20NSW%202015%2C%20Australia&z=16&iwloc=B&output=embed"
+          title="LKG Construction location in Brisbane"
+          src="https://maps.google.com/maps?hl=en&q=Brisbane%20QLD%2C%20Australia&z=11&iwloc=B&output=embed"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
@@ -113,10 +114,10 @@ export default function ContactPage() {
         <article className={styles.locationCard}>
           <h2>Our Location</h2>
           <span />
-          <p>We are based in Alexandria, Sydney and service clients across NSW.</p>
+          <p>We are based in Brisbane, QLD and service clients across Queensland.</p>
           <div>
             <MapPin size={20} />
-            <p>Suite 2.01, 34-36 Ralph Street<br />Alexandria NSW 2015, Australia</p>
+            <p>Brisbane QLD, Australia</p>
           </div>
         </article>
       </section>

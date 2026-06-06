@@ -79,7 +79,7 @@ export default function ProjectsSection() {
         <div className={styles.dots} aria-label="Project gallery pagination">
           {pages.map((page, index) => (
             <button
-              aria-label={`Show project group ${index + 1}`}
+              aria-label={`Go to project slide ${index + 1}`}
               aria-current={activePage === index ? 'true' : undefined}
               className={activePage === index ? styles.current : ''}
               key={page[0].title}
